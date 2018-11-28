@@ -98,6 +98,7 @@ module.exports = function(
     start: 'react-scripts start',
     build: 'react-scripts build',
     test: 'react-scripts test',
+    mocha: 'react-scripts mocha',
     eject: 'react-scripts eject',
   };
 
