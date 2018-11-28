@@ -10,6 +10,9 @@
   "bugs": {
     "url": "https://github.com/facebook/create-react-app/issues"
   },
+  "scripts": {
+    "testinstall": "npm pack && npx create-react-app test-cra --scripts-version ../react-scripts-mocha-`npm view react-scripts-mocha version`.tgz"
+  },
   "files": [
     "bin",
     "config",
