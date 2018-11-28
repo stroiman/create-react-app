@@ -1,11 +1,14 @@
 {
-  "name": "react-scripts-mocha",
-  "version": "2.1.1",
+  "name": "@stroiman/react-scripts-mocha",
+  "version": "0.1.0",
   "description": "Configuration and scripts for Create React App - modified to support mocha",
   "repository": "stroiman/create-react-app",
   "license": "MIT",
   "engines": {
     "node": ">=6"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "bugs": {
     "url": "https://github.com/facebook/create-react-app/issues"
