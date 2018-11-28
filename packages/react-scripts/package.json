@@ -1,8 +1,8 @@
 {
-  "name": "react-scripts",
+  "name": "react-scripts-mocha",
   "version": "2.1.1",
-  "description": "Configuration and scripts for Create React App.",
-  "repository": "facebook/create-react-app",
+  "description": "Configuration and scripts for Create React App - modified to support mocha",
+  "repository": "stroiman/create-react-app",
   "license": "MIT",
   "engines": {
     "node": ">=6"
