@@ -35,12 +35,19 @@ To run mocha in "watch" mode
 npm run mocha -- -w
 ```
 
+## Configuring test files to load
+
+Modify `test/mocha.opts` to tell mocha where to find your test files.
+
 ## Jest is still included
 
 It is a design decision to change as little as possible from the origin CRA in
 order to avoid merge conflicts when updating this package with udpates to CRA.
 
 Therefore jest is still included, and `npm run test` will still run jest.
+
+But feel free to change the scripts in your `package.json` after bootstrapping
+the react app.
 
 ## Typescript support?
 
