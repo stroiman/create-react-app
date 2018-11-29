@@ -19,12 +19,8 @@ And I don't really need any of the features that Jest provides.
 
 ## Usage
 
-Package is currently under the "@stroiman" scope. I wanted to see that this
-works before pushing to global NPM package scope - to avoid polluting the global
-scope with useless packages.
-
 ```sh
-create-react-app react-app --scripts-version @stroiman/react-scripts-mocha
+create-react-app react-app --scripts-version react-scripts-mocha
 cd react-app
 npm run mocha
 ```

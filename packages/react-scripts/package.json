@@ -1,5 +1,5 @@
 {
-  "name": "@stroiman/react-scripts-mocha",
+  "name": "react-scripts-mocha",
   "version": "0.1.2",
   "description": "Configuration and scripts for Create React App - modified to support mocha",
   "repository": "stroiman/create-react-app",
