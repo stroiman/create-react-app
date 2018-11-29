@@ -1,15 +1,14 @@
-'use strict';
-
-process.env.BABEL_ENV = 'test';
-process.env.NODE_ENV = 'test';
-process.env.PUBLIC_URL = '';
-
-require('@babel/register');
+// --require @babel/register
+require('@babel/register')({
+  "presets": [ "react-app" ],
+});
 require('ignore-styles');
 
-const JSDOM = require('jsdom').JSDOM;
+const { JSDOM } = require('jsdom');
+
 const jsdom = new JSDOM('<!doctype html><html><body></body></html>');
 const { window } = jsdom;
+
 function copyProps(src, target) {
   const props = Object.getOwnPropertyNames(src)
     .filter(prop => typeof target[prop] === 'undefined')
@@ -27,9 +26,3 @@ global.navigator = {
   userAgent: 'node.js',
 };
 copyProps(window, global);
-
-const path = require('path');
-process.argv.push("--require");
-process.argv.push(path.join(__dirname, "utils/mochaInitialization"));
-
-require('mocha/bin/mocha');
