@@ -1,3 +1,45 @@
+# Create React App - mocha flavoured
+
+create-react-app is a great tool for bootstrapping a react application, but it
+comes with Jest as unit test runner - I would rather use mocha.
+
+Package is currently under the "@stroiman" scope. I wanted to see that this
+works before pushing to global NPM package scope - to avoid polluting the global
+scope with useless packages.
+
+```sh
+create-react-app react-app --scripts-version @stroiman/react-scripts-mocha
+cd react-app
+npm run mocha
+```
+
+To run mocha in "watch" mode
+
+```sh
+npm run mocha -- -w
+```
+
+## Jest is still included
+
+It is a design decision to change as little as possible from the origin CRA in
+order to avoid merge conflicts when updating this package with udpates to CRA.
+
+Therefore jest is still included, and `npm run test` will still run jest.
+
+## Typescript support?
+
+Typescript support is not a goal, but if it can be accomplished with a minimal
+effort, then that should come.
+
+## Up-to-dateness?
+
+I hope I can set up an automated daily build that will check for new published CRA
+versions and automatically merge the changes to this package.
+
+---
+
+Original readme
+
 # Create React App [![Build Status](https://travis-ci.org/facebook/create-react-app.svg?branch=master)](https://travis-ci.org/facebook/create-react-app)
 
 Create React apps with no build configuration.
