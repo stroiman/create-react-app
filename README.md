@@ -1,4 +1,4 @@
-# Create React App - mocha flavoured
+# Mocha Flavoured Create React App
 
 create-react-app is a great tool for bootstrapping a react application, but it
 comes with Jest as unit test runner - I would rather use mocha.
@@ -31,13 +31,38 @@ To run mocha in "watch" mode
 npm run mocha -- -w
 ```
 
-## Configuring test files to load
+## Update an existing app created with create-react-app
 
-Modify `test/mocha.opts` to tell mocha where to find your test files.
+**1: replace `react-scripts` with `react-scripts-mocha`**
+
+```sh
+# if using npm - change accordingly if you use yarn
+npm uninstall react-scripts
+npm install react-scripts-mocha
+```
+
+**2: Add a mocha script to `package.json`**
+
+Alternatively, just change the existing "test" script
+
+```json
+"scripts": {
+   ...
+   "mocha": "react-scripts mocha"
+}
+```
+
+**3: Optional: add a `test/mocha.opts` file**
+
+```sh
+mkdir -p test
+# Adjust to the pattern matching your test files
+echo "src/**/*.test.js" > test/mocha.opts
+```
 
 ## Jest is still included
 
-It is a design decision to change as little as possible from the origin CRA in
+It is a design decision to change as little as possible from the original CRA in
 order to avoid merge conflicts when updating this package with udpates to CRA.
 
 Therefore jest is still included, and `npm run test` will still run jest.
