@@ -3,6 +3,22 @@
 create-react-app is a great tool for bootstrapping a react application, but it
 comes with Jest as unit test runner - I would rather use mocha.
 
+## Why mocha?
+
+Speed!
+
+When I save any file in my project, my no. 1 concern is how fast the unit tests
+run.
+
+Jest - From I save until I get a test result is measured in seconds. And that is
+just for the one single test case you get with a fresh CRA app.
+
+Mocha - Runs in a few milliseconds.
+
+And I don't really need any of the features that Jest provides.
+
+## Usage
+
 Package is currently under the "@stroiman" scope. I wanted to see that this
 works before pushing to global NPM package scope - to avoid polluting the global
 scope with useless packages.
