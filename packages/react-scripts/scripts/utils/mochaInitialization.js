@@ -19,7 +19,17 @@ function copyProps(src, target) {
   Object.defineProperties(target, props);
 }
 
-global.fetch = require('node-fetch');
+// Setup a fetch in global scope
+const nodeFetch = require('node-fetch');
+global.fetch = (url, ...args) => {
+  // If no protocol is specified, prepend http://localhost
+  // perhaps we should use window.location? - But that is currently about:blank
+  if (! /^https?:\/\//.test(url) ) {
+    url = "http://localhost" + url;
+  }
+  return nodeFetch(url, ...args);
+}
+
 global.window = window;
 global.document = window.document;
 global.navigator = {
