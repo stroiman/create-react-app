@@ -1,6 +1,6 @@
 # Mocha Flavoured Create React App
 
-create-react-app is a great tool for bootstrapping a react application, but it
+create-react-app (CRA) is a great tool for bootstrapping a react application, but it
 comes with Jest as unit test runner - I would rather use mocha.
 
 ## Why mocha?
@@ -60,6 +60,32 @@ mkdir -p test
 echo "src/**/*.test.js" > test/mocha.opts
 ```
 
+## Stability
+
+So far, I have been able to create a mocha flavoured react app from the
+template.
+
+I have also taken an existing app in a very early state, and replaced CRA with
+CRA-mocha (using the guidelines).
+
+So there may very well be some issues I have not discovered yet.
+
+## Up-to-dateness?
+
+I hope I can set up an automated daily build that will check for new published CRA
+versions and automatically merge the changes to this package.
+
+Until then, keeping this up-to-date with CRA is a manual process.
+
+## Flow support?
+
+I intend to use this with a project that uses flow, so this must work with flow.
+
+## Typescript support?
+
+Typescript support is not a goal, but if it can be accomplished with a minimal
+effort, then that should come.
+
 ## Jest is still included
 
 It is a design decision to change as little as possible from the original CRA in
@@ -69,16 +95,6 @@ Therefore jest is still included, and `npm run test` will still run jest.
 
 But feel free to change the scripts in your `package.json` after bootstrapping
 the react app.
-
-## Typescript support?
-
-Typescript support is not a goal, but if it can be accomplished with a minimal
-effort, then that should come.
-
-## Up-to-dateness?
-
-I hope I can set up an automated daily build that will check for new published CRA
-versions and automatically merge the changes to this package.
 
 ---
 
