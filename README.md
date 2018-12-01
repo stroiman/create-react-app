@@ -3,6 +3,9 @@
 create-react-app (CRA) is a great tool for bootstrapping a react application, but it
 comes with Jest as unit test runner - I would rather use mocha.
 
+Please check out [the original CRA](https://github.com/facebook/create-react-app)
+before using this version.
+
 ## Why mocha?
 
 Speed!
