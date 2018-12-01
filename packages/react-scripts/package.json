@@ -1,6 +1,6 @@
 {
   "name": "react-scripts-mocha",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Configuration and scripts for Create React App - modified to support mocha",
   "repository": "stroiman/create-react-app-mocha",
   "license": "MIT",
